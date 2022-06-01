@@ -1,0 +1,93 @@
+body{
+     background-color: rgb(133, 182, 255);
+}
+
+.header-container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50px 50px;
+    grid-row-gap: 20px;
+    grid-template-areas: 
+    "encabezado    .   "
+    "fondoNav fondoNav "
+    ;
+}
+
+
+.encabezado{
+    grid-area: encabezado;
+    font-family: 'Oswald', sans-serif;
+}
+
+.fondoNav{
+    grid-area: fondoNav;
+    background-color: rgba(47, 79, 79, 0.89);
+    color: rgb(41, 241, 241);
+}
+
+
+
+.navBar{
+    display: flex;
+    justify-content: space-evenly;
+}
+.navBar li{
+    list-style: none;
+}
+.navBar li a{
+    text-decoration: none;
+}
+
+
+.menu{
+    list-style: none;
+    text-decoration: none;
+    color: rgb(41, 241, 241);
+
+}
+
+
+.contenido{
+    font-family: 'Koulen', cursive;
+    display: flex;
+    justify-content:space-evenly;
+    
+}
+
+.fotoPrincipal{
+    display: flex;
+    justify-content: space-evenly;
+    /* width: 320px;
+    height: 475px; */
+
+}
+
+.redesS{
+    width: 80px;
+    height: 80px;
+}
+
+
+/* responsive */
+
+@media screen and (min-width: 0px) and (max-width: 767px){
+    .fotoPrincipal{
+        width: 200px;
+        height: 200px;
+    }
+
+    .contenido h3{
+        color: bisque;
+        background-color: black;
+        
+    }
+    
+    .header-container{
+        display: grid;
+        grid-template-columns: repeat(4 1fr);
+        grid-template-rows:none;
+        grid-row-gap: -10px;
+    }
+    
+    
+}
